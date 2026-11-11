@@ -207,7 +207,6 @@ img {
 .c-button--primary {
   background: #cf5955;
   color: #ffffff;
-  
 }
 
 .c-button--secondary:hover {
@@ -252,21 +251,21 @@ img {
   justify-content: center;
 }
 
-.l-header__wrapper{
+.l-header__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 24px 0;
 }
 
-.l-header__nav-and-utilities{
+.l-header__nav-and-utilities {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 24px;
 }
 
-.l-header__logo-item{
+.l-header__logo-item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -274,11 +273,87 @@ img {
   max-width: 129px;
 }
 
-.l-header__logo-item img{
+.l-header__logo-item img {
   width: 48px;
 }
 
-.l-global-nav__list{
+.l-global-nav__list {
   display: flex;
   gap: 24px;
+}
+
+.c-button__menu-bar {
+  display: none;
+  padding: 4px 5px;
+  border-radius: 4px;
+  border: 1px solid #d4d4d4;
+  background-color: inherit;
+}
+
+.c-button__menu-bar:hover {
+  cursor: pointer;
+  background-color: #f5f6f7;
+}
+
+.c-button__menu-bar img {
+  width: 30px;
+  height: auto;
+}
+
+@media (max-width: 850px) {
+  .l-header__nav-and-utilities{
+    display: none;
+  }
+
+  .c-button__menu-bar{
+    display: block;
+  }
+
+  .l-header__wrapper {
+    position: relative;
+  }
+
+  .l-header__nav-and-utilities {
+    opacity: 0;
+    visibility: hidden;
+    z-index: 100;
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 90%;
+    border-radius: 7px;
+    box-shadow: 0px 8px 20px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+    transform: translateY(-15px);
+  }
+
+  .l-header__nav-and-utilities.is-open{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .l-global-nav__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .l-global-nav__item{
+    padding: 12px 0 12px 15px;
+    border-radius: 7px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .l-global-nav__item:has(.l-global-nav__link:hover),
+  .l-global-nav__item:has(.l-global-nav__link.active) {
+    box-shadow: 0px 9px 22px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  .c-button--secondary {
+    border: none;
+    color: #cf5955;
+    border-radius: 7px;
+    padding: 15px 0 15px 15px;
+  }
 }
