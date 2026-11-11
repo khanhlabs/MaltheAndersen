@@ -1,6 +1,7 @@
 const menuToggle = document.querySelector(".c-button__menu-bar");
 const navMenu = document.querySelector(".l-header__nav-and-utilities");
 const navLinks = document.querySelectorAll(".l-global-nav__link");
+const button = document.querySelectorAll(".c-button");
 
 
 menuToggle.addEventListener("click", () => {
@@ -23,6 +24,12 @@ document.addEventListener("click", (event) => {
 
 navLinks.forEach(link => {
     link.addEventListener("click", () => {
+        closeMenu();
+    });
+});
+
+button.forEach(button => {
+    button.addEventListener("click", () => {
         closeMenu();
     });
 });
