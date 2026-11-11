@@ -146,19 +146,19 @@ img {
 /* ------------------------------------------------------------------ */
 
 .c-bg--muted {
-  color: #f5f6f7;
+  background-color: #f5f6f7;
 }
 
 .c-bg--danger-subtle {
-  color: #faeeee;
+  background-color: #faeeee;
 }
 
 .c-bg--danger-light {
-  color: #faedec;
+  background-color: #faedec;
 }
 
 .c-bg--danger-soft {
-  color: #f5dedd;
+  background-color: #f5dedd;
 }
 
 /* ------------------------------------------------------------------ */
@@ -297,11 +297,11 @@ img {
 }
 
 @media (max-width: 850px) {
-  .l-header__nav-and-utilities{
+  .l-header__nav-and-utilities {
     display: none;
   }
 
-  .c-button__menu-bar{
+  .c-button__menu-bar {
     display: block;
   }
 
@@ -310,6 +310,7 @@ img {
   }
 
   .l-header__nav-and-utilities {
+    background-color: #ffffff;
     opacity: 0;
     visibility: hidden;
     z-index: 100;
@@ -323,7 +324,7 @@ img {
     transform: translateY(-15px);
   }
 
-  .l-header__nav-and-utilities.is-open{
+  .l-header__nav-and-utilities.is-open {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -335,7 +336,7 @@ img {
     gap: 0;
   }
 
-  .l-global-nav__item{
+  .l-global-nav__item {
     padding: 12px 0 12px 15px;
     border-radius: 7px;
     transition: all 0.2s ease-in-out;
@@ -356,7 +357,166 @@ img {
 
 /* -------------------------------------KEY-VISUAL-------------------------------- */
 
-
-.p-section-keyvisual__wrapper{
+.p-section-keyvisual__wrapper {
   align-items: center;
+  justify-content: space-between;
+}
+
+.p-section-keyvisual__left {
+  width: 58%;
+  max-width: 371px;
+}
+
+.p-section-keyvisual__greeting {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.p-section-keyvisual__greeting-line {
+  width: 32px;
+  height: 2px;
+  background-color: #cf5955;
+}
+
+.p-section-keyvisual__title {
+  margin-bottom: 24px;
+}
+
+.p-section-keyvisual__description {
+  margin-bottom: 24px;
+}
+
+.c-keyvisual-action {
+  display: inline-flex;
+  padding: 16px 20px;
+  gap: 5px;
+}
+
+.p-section-keyvisual__right {
+  width: 24.9375rem;
+}
+
+@media (max-width: 760px) {
+  .l-header__wrapper {
+    padding: 14px 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .p-section-keyvisual__title {
+    font-size: 35px;
+    line-height: 30px;
+    margin-bottom: 18px;
+  }
+
+  .p-section-keyvisual__description {
+    margin-bottom: 12px;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .c-keyvisual-action {
+    padding: 11px 15px;
+    font-size: 13px;
+  }
+
+  .c-text--note {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 620px) {
+  .p-section-keyvisual__greeting {
+    margin-bottom: 4px;
+  }
+
+  .p-section-keyvisual__title {
+    font-size: 29px;
+    line-height: 30px;
+    margin-bottom: 13px;
+  }
+
+  .p-section-keyvisual__description {
+    margin-bottom: 12px;
+    font-size: 13px;
+    line-height: 17px;
+  }
+}
+
+@media (max-width: 600px) {
+  .p-section-keyvisual__wrapper {
+    flex-direction: column;
+    padding: 25px 0;
+  }
+
+  .p-section-keyvisual__left {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .p-section-keyvisual__right {
+    width: 98%;
+  }
+}
+
+@media (max-width: 380px) {
+  .p-section-keyvisual__greeting {
+    gap: 7px;
+}
+.p-section-keyvisual__greeting-line {
+    width: 20px;
+    height: 1px;
+}
+
+}
+
+/* ---------------------------------CONTACT------------------------------- */
+
+.p-section-contact__wrapper {
+  display: flex;
+  align-items: center;
+  padding: 18px 24px;
+  border-radius: 12px;
+  gap: 16px;
+}
+
+.p-section-contact__list {
+  display: flex;
+  gap: 16px;
+}
+
+.p-section-contact__link img:last-child {
+  display: none;
+}
+
+.p-section-contact__link:hover img:first-child {
+  display: none;
+}
+
+.p-section-contact__link:hover img:last-child {
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .p-section-contact__wrapper {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 415px) {
+  .p-section-contact__wrapper {
+    flex-direction: column;
+  }
+
+  .p-section-contact__wrapper {
+    display: flex;
+    align-items: center;
+    padding: 10px 24px;
+    border-radius: 12px;
+    gap: 10px;
+  }
 }
