@@ -17,6 +17,7 @@ body {
 .wrapper {
   display: flex;
   width: min(100% - 40px, 925px);
+  margin: 0 auto;
 }
 
 ul,
@@ -246,11 +247,6 @@ img {
 
 /* --------------------------------HEADER-------------------------------- */
 
-.l-header {
-  display: flex;
-  justify-content: center;
-}
-
 .l-header__wrapper {
   display: flex;
   justify-content: space-between;
@@ -356,4 +352,11 @@ img {
     border-radius: 7px;
     padding: 15px 0 15px 15px;
   }
+}
+
+/* -------------------------------------KEY-VISUAL-------------------------------- */
+
+
+.p-section-keyvisual__wrapper{
+  align-items: center;
 }
